@@ -1,4 +1,4 @@
-package com.loitsch.matthias.newsletter;
+package com.loitsch.matthias.newsletter.entities;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
@@ -8,23 +8,15 @@ import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.Key;
 
+
 @PersistenceCapable
-public class Address {
+public class PhoneNumber {
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
     private Key id;
 
     @Persistent
-    private String street;
-
-    @Persistent
-    private String city;
-
-    @Persistent
-    private String country;
-
-    @Persistent
-    private Integer zipCode;
+    private String number;
 
     @Persistent
     private Contact contact;

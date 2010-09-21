@@ -1,4 +1,4 @@
-package com.loitsch.matthias.newsletter;
+package com.loitsch.matthias.newsletter.entities;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.loitsch.matthias.newsletter.Contact;
+import com.loitsch.matthias.newsletter.entities.Contact;
 
 import com.loitsch.matthias.newsletter.PMF;
 import javax.jdo.PersistenceManager;
