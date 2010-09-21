@@ -45,6 +45,22 @@
 
   <security-constraint>
     <web-resource-collection>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <!--
+    Just if something changes to the normal security constraints, I leave
+    this in, because tasks should ALWAYS be in the admin constraint
+    -->
+    <web-resource-collection>
       <url-pattern>/tasks/*</url-pattern>
     </web-resource-collection>
     <auth-constraint>
