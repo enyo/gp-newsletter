@@ -20,7 +20,7 @@ import javax.jdo.PersistenceManager;
  *
  * @author enyo
  */
-public class CreateContactServlet extends HttpServlet {
+public class UpdateContactServlet extends HttpServlet {
 
   /**
    * Handles the HTTP <code>POST</code> method.
@@ -34,23 +34,21 @@ public class CreateContactServlet extends HttpServlet {
           throws ServletException, IOException {
 
 
-    String title = request.getParameter("title");
-    String firstName = request.getParameter("firstName");
-    String middleName = request.getParameter("middleName");
-    String lastName = request.getParameter("lastName");
-    String email = request.getParameter("email");
-    String note = request.getParameter("note");
-
-    Contact contact = new Contact(title, firstName, middleName, lastName, email, note);
-
     PersistenceManager pm = PMF.get().getPersistenceManager();
-    try {
-      pm.makePersistent(contact);
-    } finally {
-      pm.close();
-    }
 
-    response.sendRedirect("view-contacts.jsp");
+    Contact contact = pm.getObjectById(Contact.class, Long.parseLong(request.getParameter("id")));
+
+
+    contact.setTitle(request.getParameter("title"));
+    contact.setFirstName(request.getParameter("firstName"));
+    contact.setMiddleName(request.getParameter("middleName"));
+    contact.setLastName(request.getParameter("lastName"));
+    contact.setEmail(request.getParameter("email"));
+    contact.setNote(request.getParameter("note"));
+
+    pm.close();
+
+    response.sendRedirect("view-contact.jsp?id=" + contact.getId());
 
   }
 

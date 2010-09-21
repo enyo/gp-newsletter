@@ -4,9 +4,26 @@
         <servlet-name>CreateContact</servlet-name>
         <servlet-class>com.loitsch.matthias.newsletter.servlets.CreateContactServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateContact</servlet-name>
+        <servlet-class>com.loitsch.matthias.newsletter.servlets.UpdateContactServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteContact</servlet-name>
+        <servlet-class>com.loitsch.matthias.newsletter.servlets.DeleteContactServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>CreateContact</servlet-name>
         <url-pattern>/create-contact</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteContact</servlet-name>
+        <url-pattern>/delete-contact</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateContact</servlet-name>
+        <url-pattern>/update-contact</url-pattern>
     </servlet-mapping>
 
     <session-config>

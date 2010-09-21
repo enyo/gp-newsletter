@@ -20,35 +20,28 @@ import javax.jdo.PersistenceManager;
  *
  * @author enyo
  */
-public class CreateContactServlet extends HttpServlet {
+public class DeleteContactServlet extends HttpServlet {
 
   /**
-   * Handles the HTTP <code>POST</code> method.
+   * Handles the HTTP <code>GET</code> method.
    * @param request servlet request
    * @param response servlet response
    * @throws ServletException if a servlet-specific error occurs
    * @throws IOException if an I/O error occurs
    */
   @Override
-  protected void doPost(HttpServletRequest request, HttpServletResponse response)
+  protected void doGet(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
 
 
-    String title = request.getParameter("title");
-    String firstName = request.getParameter("firstName");
-    String middleName = request.getParameter("middleName");
-    String lastName = request.getParameter("lastName");
-    String email = request.getParameter("email");
-    String note = request.getParameter("note");
+    Long contactId = Long.parseLong(request.getParameter("id"));
 
-    Contact contact = new Contact(title, firstName, middleName, lastName, email, note);
 
     PersistenceManager pm = PMF.get().getPersistenceManager();
-    try {
-      pm.makePersistent(contact);
-    } finally {
-      pm.close();
-    }
+
+    Contact contact = pm.getObjectById(Contact.class, contactId);
+
+    pm.deletePersistent(contact);
 
     response.sendRedirect("view-contacts.jsp");
 
