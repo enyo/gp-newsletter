@@ -12,6 +12,14 @@
         <servlet-name>DeleteContact</servlet-name>
         <servlet-class>com.loitsch.matthias.newsletter.servlets.DeleteContactServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SendNewsletter</servlet-name>
+        <servlet-class>com.loitsch.matthias.newsletter.servlets.SendNewsletterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendMail</servlet-name>
+        <servlet-class>com.loitsch.matthias.newsletter.servlets.SendMailServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>CreateContact</servlet-name>
@@ -24,6 +32,14 @@
     <servlet-mapping>
         <servlet-name>UpdateContact</servlet-name>
         <url-pattern>/update-contact</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendNewsletter</servlet-name>
+        <url-pattern>/send-newsletter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendMail</servlet-name>
+        <url-pattern>/send-mail</url-pattern>
     </servlet-mapping>
 
     <session-config>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queue-entries>
+  <queue>
+    <name>mail-queue</name>
+    <rate>8/m</rate>
+  </queue>
+</queue-entries>
