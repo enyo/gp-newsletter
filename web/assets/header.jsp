@@ -12,3 +12,6 @@
 
   </head>
   <body>
+
+
+    <jsp:include page="messages.jsp" flush="true" />

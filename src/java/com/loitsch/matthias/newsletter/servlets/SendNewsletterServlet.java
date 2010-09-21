@@ -55,10 +55,10 @@ public class SendNewsletterServlet extends HttpServlet {
     List<Contact> contacts = (List<Contact>) pm.newQuery(query).execute();
     if (!contacts.isEmpty()) {
       for (Contact c : contacts) {
-          queue.add(url("/send-mail").param("recipientEmail", c.getEmail()).param("recipientName", c.getFormattedName()).param("subject", subject).param("message", message));
+          queue.add(url("/tasks/send-mail").param("recipientEmail", c.getEmail()).param("recipientName", c.getFormattedName()).param("subject", subject).param("message", message));
       }
     }
 
-    response.sendRedirect("/send-newsletter.jsp");
+    response.sendRedirect("/send-newsletter.jsp?success=Successfully+sent");
   }
 }

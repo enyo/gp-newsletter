@@ -8,6 +8,7 @@
 
 <a href="/view-contacts.jsp">View contacts</a><br /><Br />
 
+
 <form action="/send-newsletter" method="post">
   Subject: <input type="text" name="subject" value="" /><br />
   Message: <textarea name="message"></textarea>
