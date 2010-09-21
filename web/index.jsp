@@ -14,15 +14,11 @@
     <title>JSP Page</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Gesundheitspraxis newsletter!</h1>
 
     <a href="/view-contacts.jsp">View contacts</a>
-    <a href="/create-contact.jsp">Create contact</a>
-
-
-    <form action="/send-newsletter" method="post">
-      <input type="submit" value="Send newsletter" />
-    </form>
+    <a href="/create-contact.jsp">Create contact</a><br /><br />
+    <a href="/send-newsletter.jsp">Send newsletter</a>
 
   </body>
 </html>

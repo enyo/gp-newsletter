@@ -1,10 +1,11 @@
 package com.loitsch.matthias.newsletter.entities;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+
+import java.lang.StringBuilder;
 
 import java.util.List;
 
@@ -108,4 +109,26 @@ public class Contact {
     this.title = title;
   }
 
+  /**
+   * Returns a formatted name using the title, first, middle and last name.
+   * @return
+   */
+  public String getFormattedName() {
+    StringBuilder sb = new StringBuilder();
+    if (!title.isEmpty()) {
+      sb.append(title);
+      sb.append(" ");
+    }
+
+    sb.append(firstName);
+    sb.append(" ");
+    if (!middleName.isEmpty()) {
+      sb.append(middleName);
+      sb.append(" ");
+    }
+    sb.append(lastName);
+
+
+    return sb.toString();
+  }
 }

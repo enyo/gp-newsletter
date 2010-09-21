@@ -8,7 +8,10 @@
 <%@ page import="com.loitsch.matthias.newsletter.utils.StringUtils" %>
 
 
-<a href="/create-contact.jsp">Create contact</a><br /><Br />
+<a href="/create-contact.jsp">Create contact</a>
+<a href="/send-newsletter.jsp">Send newsletter</a>
+
+<br /><br />
 
 <%
       PersistenceManager pm = PMF.get().getPersistenceManager();
