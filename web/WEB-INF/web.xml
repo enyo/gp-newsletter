@@ -5,12 +5,28 @@
     <servlet-class>com.loitsch.matthias.newsletter.servlets.CreateContactServlet</servlet-class>
   </servlet>
   <servlet>
+    <servlet-name>CreateAddress</servlet-name>
+    <servlet-class>com.loitsch.matthias.newsletter.servlets.CreateAddressServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreatePhoneNumber</servlet-name>
+    <servlet-class>com.loitsch.matthias.newsletter.servlets.CreatePhoneNumberServlet</servlet-class>
+  </servlet>
+  <servlet>
     <servlet-name>UpdateContact</servlet-name>
     <servlet-class>com.loitsch.matthias.newsletter.servlets.UpdateContactServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>DeleteContact</servlet-name>
     <servlet-class>com.loitsch.matthias.newsletter.servlets.DeleteContactServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteAddress</servlet-name>
+    <servlet-class>com.loitsch.matthias.newsletter.servlets.DeleteAddressServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeletePhoneNumber</servlet-name>
+    <servlet-class>com.loitsch.matthias.newsletter.servlets.DeletePhoneNumberServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>SendNewsletter</servlet-name>
@@ -26,8 +42,24 @@
     <url-pattern>/create-contact</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+    <servlet-name>CreateAddress</servlet-name>
+    <url-pattern>/create-address</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreatePhoneNumber</servlet-name>
+    <url-pattern>/create-phone-number</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
     <servlet-name>DeleteContact</servlet-name>
     <url-pattern>/delete-contact</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteAddress</servlet-name>
+    <url-pattern>/delete-address</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeletePhoneNumber</servlet-name>
+    <url-pattern>/delete-phone-number</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>UpdateContact</servlet-name>

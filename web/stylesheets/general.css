@@ -1,8 +1,30 @@
 
+* {
+  font-family: arial, tahoma, sans-serif;
+  font-size: 12px;
+}
+
 .error {
   color: red;
 }
 
 .success {
   color: green;
+}
+
+
+
+#container {
+  width: 800px;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+.address {
+  border: 1px solid silver;
+  padding: 5px 10px;
+  background: #efefef;
+  margin: 5px;
+  width: 350px;
+  display: inline-block;
 }

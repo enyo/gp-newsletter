@@ -13,5 +13,6 @@
   </head>
   <body>
 
+    <div id="container">
 
     <jsp:include page="messages.jsp" flush="true" />

@@ -3,6 +3,7 @@ package com.loitsch.matthias.newsletter.entities;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.Element;
 import javax.jdo.annotations.PrimaryKey;
 
 import java.lang.StringBuilder;
@@ -28,8 +29,10 @@ public class Contact {
   @Persistent
   private String note;
   @Persistent(mappedBy = "contact")
+  @Element(dependent = "true")
   private List<Address> addresses;
   @Persistent(mappedBy = "contact")
+  @Element(dependent = "true")
   private List<PhoneNumber> phoneNumbers;
 
   public Contact(String title, String firstName, String middleName, String lastName, String email, String note) {

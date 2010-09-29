@@ -3,7 +3,7 @@
 
 <%@ page import="java.util.List" %>
 <%@ page import="javax.jdo.PersistenceManager" %>
-<%@ page import="com.loitsch.matthias.newsletter.Contact" %>
+<%@ page import="com.loitsch.matthias.newsletter.entities.Contact" %>
 <%@ page import="com.loitsch.matthias.newsletter.PMF" %>
 <%@ page import="com.loitsch.matthias.newsletter.utils.StringUtils" %>
 

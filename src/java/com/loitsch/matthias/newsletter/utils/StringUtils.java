@@ -10,12 +10,17 @@ package com.loitsch.matthias.newsletter.utils;
  */
 public class StringUtils {
 
+  public static String escapeHtml(String string) {
+    return escapeHtml(string, false);
+  }
+
   /**
    * Escapes all characters that could pose a problem in html.
    * @param string
+   * @param Boolean
    * @return
    */
-  public static String escapeHtml(String string) {
+  public static String escapeHtml(String string, Boolean newlines) {
     int len = string.length();
     char c;
 
@@ -35,6 +40,13 @@ public class StringUtils {
           break;
         case '"':
           sb.append("&quot;");
+          break;
+        case '\n':
+          if (newlines) {
+            sb.append("<br />");
+          } else {
+            sb.append(c);
+          }
           break;
         default:
           sb.append(c);
